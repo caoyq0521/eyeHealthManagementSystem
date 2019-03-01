@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>选择角色</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="selectRole.css">
+</head>
+
+<body>
+    <div class='container' id='app'> 
+        <div class='mainBody'>
+            <div class="mainMes">
+                <div class='title flex-wrap flex-center'>
+                    <img src='../../image/sysIcon.jpg'>
+                </div> 
+               <div class="selectRole">
+                   <div class="flex-wrap flex-center role" @click='selectDoctor'>我是医生</div>
+                   <div class="flex-wrap flex-center role" @click='selectQuipment'>设备接入</div>
+                   <div class="flex-wrap flex-center role" @click='selectPatient'>我是患者</div>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/vue.min.js"></script>
+<script type="text/javascript">
+apiready = function() {
+    var header = $api.byId('app');
+        //适配iOS 7+，Android 4.4+状态栏
+        $api.fixStatusBar(header);
+
+        new Vue({
+            el:'.container',
+            methods:{
+                selectDoctor(){
+                    alert('我是医生');
+                },
+                selectQuipment(){
+                    api.openWin({
+                        name:'login',
+                        url:'../equipment/login/login.html'
+                    })
+                },
+                selectPatient(){
+                    alert('我是患者')
+                }
+            }
+        })
+}
+</script>

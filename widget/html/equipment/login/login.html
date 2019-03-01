@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>设备接入- 登录</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/header.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header-template :img-url='imgUrl' :show-back='showBack' :callback='callback' :title='title'></header-template>
+        <div class="container">
+            <div class='mainBody'>
+                <div class="mainMes">
+                    <div class='title flex-wrap flex-center'>
+                        <img src='../../../image/sysIcon.jpg'>
+                    </div>
+                    <div class='phoneLogin'>
+                        <div class='phoneNumber flex-wrap flex-spaceBetween'>
+                            <div class='flex-wrap flex-center'>
+                                <img src='../../../image/quipment/login/phone.png'>
+                            </div>
+                            <input placeholder='请输入11位手机号' type='number' value="" maxlength='11'>
+                        </div>
+                        <div class='password flex-wrap flex-spaceBetween'>
+                            <div class='flex-wrap flex-center'>
+                                <img src='../../../image/quipment/login/password.png'>
+                            </div>
+                            <input placeholder='请输入您的密码' value='' type='password' password maxlength='6'></input>
+                        </div>
+                    </div>`
+                    <div class='loginBtn flex-wrap flex-center' @click='login'>登录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/vue.min.js"></script>
+<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript" src="../../../script/headerTemplate.js"></script>

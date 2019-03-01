@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <style type="text/css">
+    html,body{
+        height: 100%;
+    }
+    #main{
+        -webkit-box-flex: 1; 
+        -webkit-flex: 1;
+        flex: 1;
+        background: url('image/suoer_login_bg.jpg') center center/cover;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>选择角色</h1>
+        </div>
+        <div id="main">
+                
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        var header = $api.byId('header');
+        //适配iOS 7+，Android 4.4+状态栏
+        $api.fixStatusBar(header);
+
+        var headerPos = $api.offset(header);
+        var main = $api.byId('main');
+        var mainPos = $api.offset(main);
+
+        api.openWin({
+            name:'selectEquipment',
+            url:'html/equipment/selectEquipment/selectEquipment.html'
+        })
+        // api.openFrame({
+        //     name: 'selectRole',
+        //     url: 'html/selectRole/selectRole.html',
+        //     bounces: true,
+        //     rect: {
+        //         x: 0,
+        //         y: headerPos.h,
+        //         w: 'auto',
+        //         h: mainPos.h
+        //     }
+        // });
+    };
+</script>
+</html>

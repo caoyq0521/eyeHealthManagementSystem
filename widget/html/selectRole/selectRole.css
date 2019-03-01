@@ -1,0 +1,29 @@
+.mainBody{
+  padding:26px 10px 0;
+}
+.mainMes{
+  width:100%;
+  height:300px;
+  background:#394046;
+  border-radius: 10px;
+  padding:0 10px;
+}
+.title{
+  height:110px;
+}
+.title img{
+  width:280px;
+  height:88px;
+}
+
+.selectRole{
+  padding: 4px 21px 0;
+}
+
+.selectRole .role{
+  height: 44px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(#cbee5e 50%,#819e25)
+}
